@@ -1,0 +1,90 @@
+@import "_minix.scss";
+@import "common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    @include box_flex;
+    @include direction(column);
+    font-size: pxTorem(18px);
+    header {
+        width: 100%;
+        height: pxTorem(50px);
+        ul {
+            width: 100%;
+            height: 100%;
+            @include box_flex;
+            @include justify(space-between);
+            li {
+                width: 25%;
+                height: 100%;
+                line-height: pxTorem(50px);
+                text-align: center;
+                color: #666;
+            }
+        }
+    }
+    section {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        .swiper-container {
+            .swiper-wrapper {
+                .swiper-slide {
+                    img {
+                        width: 100%;
+                        height: pxTorem(200px);
+                    }
+                }
+            }
+        }
+        .list {
+            width: 100%;
+            padding: 0 pxTorem(10px);
+            @include sizing;
+            @include align;
+            dl {
+                width: 100%;
+                height: pxTorem(100px);
+                border-bottom: pxTorem(1px) solid #ccc;
+                @include box_flex;
+                dt {
+                    width: 100%;
+                    height: 100%;
+                    font-size: pxTorem(16px);
+                    line-height: pxTorem(25px);
+                }
+                dd {
+                    width: pxTorem(80px);
+                    height: pxTorem(60px);
+                    margin-top: pxTorem(20px);
+                    @include sizing;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        width: 100%;
+        height: pxTorem(60px);
+        @include box_flex;
+        dl {
+            width: 20%;
+            height: 100%;
+            @include box_flex;
+            @include direction(column);
+            @include align;
+            dt {
+                width: pxTorem(30px);
+                height: pxTorem(30px);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/swiper-4.1.6.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <ul>
+                <li>推荐</li>
+                <li>热点</li>
+                <li>视频</li>
+                <li>版本</li>
+            </ul>
+        </header>
+        <section>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/4.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="img/5.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="img/88.jpg" alt=""></div>
+                </div>
+            </div>
+            <ul class="list">
+                <li>
+                    <!-- <dl>
+                        <dt>新闻哥：Dopa竟为厂长直播新闻哥1：Dopa竟为厂长直播新闻哥1：Dopa竟为厂长直播新闻哥1：Dopa竟为厂长直播？</dt>
+                        <dd><img src="img/li1.PNG" alt=""></dd>
+                    </dl>
+                    <dl>
+                        <dt>新闻哥：Dopa竟为厂长直播新闻哥1：Dopa竟为厂长直播新闻哥1：Dopa竟为厂长直播新闻哥1：Dopa竟为厂长直播？</dt>
+                        <dd><img src="img/li1.PNG" alt=""></dd>
+                    </dl>
+                    <dl>
+                        <dt>新闻哥：Dopa竟为厂长直播新闻哥1：Dopa竟为厂长直播新闻哥1：Dopa竟为厂长直播新闻哥1：Dopa竟为厂长直播？</dt>
+                        <dd><img src="img/li1.PNG" alt=""></dd>
+                    </dl>
+                    <dl>
+                        <dt>新闻哥：Dopa竟为厂长直播新闻哥1：Dopa竟为厂长直播新闻哥1：Dopa竟为厂长直播新闻哥1：Dopa竟为厂长直播？</dt>
+                        <dd><img src="img/li1.PNG" alt=""></dd>
+                    </dl> -->
+
+                </li>
+            </ul>
+        </section>
+        <footer>
+            <dl>
+                <dt><img src="img/dl1.PNG" alt=""></dt>
+                <dd>咨询</dd>
+            </dl>
+            <dl>
+                <dt><img src="img/dl2.PNG" alt=""></dt>
+                <dd>盟友</dd>
+            </dl>
+            <dl>
+                <dt><img src="img/dl1.PNG" alt=""></dt>
+                <dd>电竞</dd>
+            </dl>
+            <dl>
+                <dt><img src="img/dl2.PNG" alt=""></dt>
+                <dd>商场</dd>
+            </dl>
+            <dl>
+                <dt><img src="img/dl1.PNG" alt=""></dt>
+                <dd>战绩</dd>
+            </dl>
+        </footer>
+    </div>
+</body>
+<script src="js/swiper-4.1.6.min.js"></script>
+<script src="data/data.js"></script>
+<script>
+    var list = document.querySelector('.list');
+    new Swiper('.swiper-container');
+    list.innerHTML = data.map(function(item) {
+        return `<dl>
+                        <dt>${item.title}</dt>
+                        <dd><img src=${item.img} alt=""></dd>
+                    </dl>`
+    }).join("");
+</script>
+
+</html>
